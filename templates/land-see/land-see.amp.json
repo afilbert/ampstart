@@ -8,7 +8,7 @@
         "amp-sidebar",
         "amp-accordion",
         "amp-instagram",
-        "amp-social-share"
+        "amp-fx-parallax"
       ],
       "css-path": "templates/land-see/page.css",
       "font-stylesheets": [
@@ -67,6 +67,37 @@
         {"instagram": "#"},
         {"pinterest": "#"},
         {"email": "#"}
+      ]
+    }
+  },
+  "subscription": {
+    "form": {
+      "title": "Subscribe to Land + See",
+      "method": "GET",
+      "action": "/",
+      "heading": {
+        "level": 2,
+        "classes": "subscription-heading-text",
+        "text": "Weekly inspiration from "
+      },
+      "inputs": [
+        {
+          "input": {
+            "type": "email",
+            "value": "",
+            "placeholder": "SUBSCRIBE",
+            "id": "email",
+            "name": "name2"
+          }
+        },
+        {
+          "input": {
+            "type": "submit",
+            "value": "",
+            "id": "submit",
+            "name": "submit"
+          }
+        }
       ]
     }
   },
