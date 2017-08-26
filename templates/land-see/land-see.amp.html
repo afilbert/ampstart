@@ -17,6 +17,23 @@ limitations under the License.
 <html ⚡>
   {{> ../../utils/amp-page-head.snip.html}}
   <body class="land-see">
+    <amp-animation id="fadein" layout="nodisplay">
+      <script type="application/json">
+        {
+        "duration": "1s",
+        "fill": "both",
+        "direction": "alternate",
+        "animations": [
+          {
+            "selector": ".background",
+            "keyframes": [
+              { "transform": "translateY(calc(height('.land-see-subscribe') * -0.6))" }
+            ]
+          }
+        ]
+      }
+      </script>
+    </amp-animation>
     {{> ./partials/nav.snip.html}}
 
     <div>
@@ -34,12 +51,17 @@ limitations under the License.
       <div class="land-see-subscribe-form">
         {{> ../../components/form/form.snip.html}}
       </div>
-      <!-- <amp-img amp-fx-parallax="1.1" alt="A view of the sea, see?"
-        class="cover"
+      <amp-position-observer
+        intersection-ratios="0"
+        on="scroll:fadein.seekTo(percent=event.percent)"
+        layout="nodisplay">
+      </amp-position-observer>
+      <amp-img alt="A view of the sea, see?"
+        class="background cover"
         layout="fixed-height"
         height="679"
         src="../../img/land-see/content/khatam-tadayon-107740.jpg">
-      </amp-img> -->
+      </amp-img>
     </div>
     {{/subscription}}
 

@@ -8,7 +8,9 @@
         "amp-sidebar",
         "amp-accordion",
         "amp-instagram",
-        "amp-fx-parallax"
+        "amp-fx-parallax",
+        "amp-animation",
+        "amp-position-observer"
       ],
       "css-path": "templates/land-see/page.css",
       "font-stylesheets": [

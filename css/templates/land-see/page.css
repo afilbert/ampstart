@@ -202,12 +202,19 @@ h4,
   position: relative;
   height: 310px;
   overflow: hidden;
-  color: var(--color-primary);
-  background: url('../../img/land-see/content/khatam-tadayon-107740.jpg') top center / 1024px 679px no-repeat fixed;
+  color: var(--color-font-footer);
 }
 
-amp-img.cover img {
+.land-see-subscribe amp-img {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
   object-fit: cover;
+  object-position: top center;
+}
+
+.background {
+  z-index: 1;
 }
 
 .land-see-subscribe-form {
@@ -215,7 +222,7 @@ amp-img.cover img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 2;
 }
 
 .land-see-subscribe-form form {
@@ -249,7 +256,7 @@ amp-img.cover img {
   border: 2px solid var(--color-font-secondary);
   padding: 2px 0 0 var(--h9);
   font-size: var(--h8);
-  color: var(--color-primary);
+  color: var(--color-font-footer);
 }
 
 .ampstart-input input[type="submit"] {
@@ -264,14 +271,3 @@ amp-img.cover img {
   cursor: pointer;
   z-index: 10;
 }
-
-/*
-@media (--breakpoint-sm) {
-  .land-see-subscribe {
-    color: var(--color-font-footer);
-  }
-  .ampstart-input input[type="email"] {
-    color: var(--color-font-footer);
-  }
-}
-*/
