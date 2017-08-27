@@ -80,6 +80,20 @@
       {"title": "Interiors", "classes": "accordion-bg-100"}
     ]
   },
+  "instagram-cta": {
+    "url": "https://www.instagram.com/lifeatgoogle/",
+    "image": [
+      {"classes": "mt3 mb3", "alt-text": "Instagram, follow us!", "media-query": "(min-width: 608px)",
+       "width": 813, "height": 270, "layout": "responsive",
+       "src": "../../img/land-see/content/instagram-cta-lg.png"},
+      {"classes": "mt3 mb3", "alt-text": "Instagram, follow us!", "media-query": "(min-width: 361px) and (max-width: 607px)",
+       "width": 607, "height": 282, "layout": "responsive",
+       "src": "../../img/land-see/content/instagram-cta-md.png"},
+      {"classes": "mt4 mb4", "alt-text": "Instagram, follow us!", "media-query": "(max-width: 360px)",
+       "width": 360, "height": 210, "layout": "responsive",
+       "src": "../../img/land-see/content/instagram-cta-sm.png"}
+    ]
+  },
   "subscription": {
     "form": {
       "title": "Subscribe to Land + See",

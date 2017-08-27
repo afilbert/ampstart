@@ -259,6 +259,12 @@ section.accordion-bg-30:before {
   opacity: var(--color-accordion-opacity-30);
 }
 
+/* Instagram CTA */
+
+.instagram-cta-wrapper {
+  max-width: 813px;
+}
+
 /* Subscribe */
 
 .land-see-subscribe {
