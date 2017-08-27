@@ -72,6 +72,14 @@
       ]
     }
   },
+  "accordion": {
+    "section": [
+      {"title": "Arts & Culture", "classes": "accordion-bg-30", "expanded": "expanded"},
+      {"title": "Design", "classes": "accordion-bg-54"},
+      {"title": "Fashion", "classes": "accordion-bg-77"},
+      {"title": "Interiors", "classes": "accordion-bg-100"}
+    ]
+  },
   "subscription": {
     "form": {
       "title": "Subscribe to Land + See",
