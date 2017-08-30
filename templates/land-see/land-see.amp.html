@@ -27,7 +27,7 @@ limitations under the License.
           {
             "selector": ".background",
             "keyframes": [
-              { "transform": "translateY(calc(height('.land-see-subscribe') * -0.6))" }
+              { "transform": "translateY(calc(height('.subscribe') * -0.6))" }
             ]
           }
         ]
@@ -47,16 +47,24 @@ limitations under the License.
     </div>
 
     {{#accordion}}
-    <div class="land-see-accordion center items-center">
+    <div class="accordion center items-center">
       <amp-accordion layout="container" disable-session-states class="amp-accordion">
         {{#section}}
         <section {{expanded}} class="{{classes}}">
           <h3 class="max-width-4 mx-auto">{{title}}</h3>
           <div class="accordion-content">
-            Bunch of <br /> stuff <br /> here <br />
-            Bunch of <br /> stuff <br /> here <br />
-            Bunch of <br /> stuff <br /> here <br />
-            Bunch of <br /> stuff <br /> here <br />
+            <ul class="list-reset m0 p0 left flex justify-center nowrap">
+            {{#land-see-post}}
+              <li class="post-item {{post-type}}">
+                {{> ./partials/image.snip.html}}
+                <div class="post-category">{{post-category}}</div>
+                <h4>{{post-title}}</h4>
+                <p>
+                  {{post-copy}}
+                </p>
+              </li>
+            {{/land-see-post}}
+            </ul>
           </div>
         </section>
         {{/section}}
@@ -67,14 +75,7 @@ limitations under the License.
     {{#instagram-cta}}
     <div class="instagram-cta-wrapper mx-auto">
       <a href="{{url}}">
-        {{#image}}
-        <amp-img class="{{classes}}" alt="{{alt-text}}"
-          media="{{media-query}}"
-          width="{{width}}"
-          height="{{height}}"
-          layout="{{layout}}"
-          src="{{src}}"></amp-img>
-        {{/image}}
+        {{> ./partials/image.snip.html}}
       </a>
     </div>
     {{/instagram-cta}}

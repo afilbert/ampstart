@@ -16,21 +16,28 @@ limitations under the License.
 -->
 }}
 
-{{#subscription}}
-<div class="subscribe center items-center max-width-4 mx-auto m0 mb3">
-  <div class="subscribe-form">
-    {{> ../../components/form/form.snip.html}}
-  </div>
-  <amp-position-observer
-    intersection-ratios="0"
-    on="scroll:fadein.seekTo(percent=event.percent)"
-    layout="nodisplay">
-  </amp-position-observer>
-  <amp-img alt="A view of the sea, see?"
-    class="background cover"
-    layout="fixed-height"
-    height="679"
-    src="../../img/land-see/content/khatam-tadayon-107740.jpg">
+{{#image}}
+  <amp-img
+    {{#classes}}
+      class="post-image {{.}}"
+    {{/classes}}
+    {{#alt}}
+      alt="{{.}}"
+    {{/alt}}
+    {{#media-query}}
+      media="{{.}}"
+    {{/media-query}}
+    {{#width}}
+      width="{{.}}"
+    {{/width}}
+    {{#height}}
+      height="{{.}}"
+    {{/height}}
+    {{#layout}}
+      layout="{{.}}"
+    {{/layout}}
+    {{#src}}
+      src="{{src}}">
+    {{/src}}
   </amp-img>
-</div>
-{{/subscription}}
+{{/image}}

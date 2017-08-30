@@ -74,7 +74,18 @@
   },
   "accordion": {
     "section": [
-      {"title": "Arts & Culture", "classes": "accordion-bg-30", "expanded": "expanded"},
+      {
+        "title": "Arts & Culture", "classes": "accordion-bg-30", "expanded": "expanded",
+        "land-see-post": {
+          "image": [
+            {"classes": "mb3 cover", "alt-text": "Good eats.", "width": 196, "height": 249,
+             "layout": "responsive", "src": "../../img/land-see/content/burger-200px.jpg"}
+          ],
+          "post-category": "Arts & Culture",
+          "post-title": "Quick Bites in the Bay Area",
+          "post-copy": "From Sonoma to Santa Clara, we've found the best spots for quick and delicious bites."
+        }
+      },
       {"title": "Design", "classes": "accordion-bg-54"},
       {"title": "Fashion", "classes": "accordion-bg-77"},
       {"title": "Interiors", "classes": "accordion-bg-100"}
