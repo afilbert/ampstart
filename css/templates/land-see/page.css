@@ -264,16 +264,15 @@ section.accordion-bg-30:before {
 .post-item {
   max-width: 196px;
   text-align: left;
+}
+
+.animate {
   opacity: 0;
 	transform: translateY(-10px);
 }
 
 .post-item.wide {
   max-width: 402px;
-}
-
-.post-item:last-child {
-  margin-right: 0;
 }
 
 amp-img.cover img {
@@ -289,10 +288,6 @@ a.post-category {
 .post-item h4 {
   font: 600 var(--h4)/var(--line-height-6) var(--font-secondary);
   color: var(--color-font-primary);
-}
-
-.post-item h4 a {
-  text-decoration: none;
 }
 
 .post-item h4 a:hover {
@@ -362,6 +357,10 @@ a.post-category {
 
 .ampstart-input > label {
   display: none;
+}
+
+.ampstart-input input:not([type=checkbox]):not([type=radio]) {
+  -webkit-appearance: none;
 }
 
 .ampstart-input input[type="email"] {

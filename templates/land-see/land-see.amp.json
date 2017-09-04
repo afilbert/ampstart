@@ -1,135 +1,26 @@
 {
-  "land-see": {
-    "head-tag": {
-      "title": "Land + See",
-      "canonical-path": "templates/land-see/land-see.amp",
-      "extensions": [
-        "amp-carousel",
-        "amp-sidebar",
-        "amp-accordion",
-        "amp-instagram",
-        "amp-animation",
-        "amp-position-observer"
-      ],
-      "css-path": "templates/land-see/page.css",
-      "font-stylesheets": [
-        "https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,500,600,700|Crimson+Text",
-        "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      ]
-    }
-  },
-  "navbar": {
-    "sidebar-id": "header-sidebar",
-    "logo": {
-      "name": "Land + See"
-    },
-    "nav": [
-      {
-        "link": {"url": "stories.amp.html", "nav-item-classes": "sidebar-nav-item", "text": "Stories"},
-        "contains-sub-nav": true,
-        "sub-nav": [
-          {
-            "sub-link": {"sub-url": "#", "sub-text": "All"}
-          },
-          {
-            "sub-link": {"sub-url": "#", "sub-text": "Design"}
-          },
-          {
-            "sub-link": {"sub-url": "#", "sub-text": "Fashion"}
-          },
-          {
-            "sub-link": {"sub-url": "#", "sub-text": "Interiors"}
-          },
-          {
-            "sub-link": {"sub-url": "#", "sub-text": "Arts & Culture"}
-          },
-          {
-            "sub-link": {"sub-url": "#", "sub-text": "Popular"}
-          }
-        ]
-      },
-      {
-        "link": {"url": "#", "nav-item-classes": "sidebar-nav-item", "text": "Shop"}
-      },
-      {
-        "link": {"url": "#", "nav-item-classes": "sidebar-nav-item", "text": "About"}
-      },
-      {
-        "link": {"url": "#", "nav-item-classes": "sidebar-nav-item", "text": "Contact"}
-      },
-      {
-        "search": {"text": "Search"}
-      }
-    ],
-    "social-follow": {
-      "links": [
-        {"twitter": "#"},
-        {"facebook": "#"},
-        {"instagram": "#"},
-        {"pinterest": "#"},
-        {"email": "#"}
-      ]
-    }
-  },
   "accordion": {
     "section": [
       {
-        "title": "Arts & Culture", "classes": "accordion-bg-30", "expanded": "expanded",
-        "land-see-post": [
-          {
-            "image": [
-              {"classes": "cover", "alt-text": "Good eats.", "width": 196, "height": 249,
-               "layout": "responsive", "src": "../../img/land-see/content/burger-200px.jpg"}
-            ],
-            "post-url": "#",
-            "post-category": "Arts & Culture",
-            "post-category-url": "stories.amp.html#arts-culture",
-            "post-title": "Quick Bites in the Bay Area",
-            "post-copy": "From Sonoma to Santa Clara, we've found the best spots for quick and delicious bites."
-          },
-          {
-            "image": [
-              {"classes": "cover", "alt-text": "Creating with clay.", "width": 196, "height": 187,
-               "layout": "responsive", "src": "../../img/land-see/content/kaneko-200px.jpg"}
-            ],
-            "post-url": "#",
-            "post-category": "Arts & Culture",
-            "post-category-url": "stories.amp.html#arts-culture",
-            "post-title": "The New Exhibit of Jun Kaneko",
-            "post-copy": "Out of three warehouses, Jun Kaneko's dream of an interdisciplinary cultural organization came to life. KANEKO focuses on exploring the act of creating."
-          },
-          {
-            "image": [
-              {"classes": "cover", "alt-text": "Silhouettes.", "width": 196, "height": 249,
-               "layout": "responsive", "src": "../../img/land-see/content/black-white-2-250px.jpg"}
-            ],
-            "post-url": "#",
-            "post-category": "Arts & Culture",
-            "post-category-url": "stories.amp.html#arts-culture",
-            "post-title": "Finding the Essence in Black & White",
-            "post-copy": "Stripped of color, these small glimpses of life more powerfully capture the moment."
-          },
-          {
-            "image": [
-              {"classes": "cover", "alt-text": "Fall colors.", "width": 196, "height": 187,
-               "layout": "responsive", "src": "../../img/land-see/content/fall-festivals-200px.jpg"}
-            ],
-            "post-url": "#",
-            "post-category": "Arts & Culture",
-            "post-category-url": "stories.amp.html#arts-culture",
-            "post-title": "Fall Festivals Around the U.S.",
-            "post-copy": "For those of us sad to see the summer leave, autumn has some surprising delights with its creative festivals from one end of the U.S. to the other."
-          }
-        ]
+        "title": "Arts & Culture",
+        "classes": "accordion-bg-30",
+        "expanded": "expanded",
+        "list-src": "./api/arts-culture-accordion.json"
       },
       {
-        "title": "Design", "classes": "accordion-bg-54"
+        "title": "Design",
+        "classes": "accordion-bg-54",
+        "list-src": "./api/design-accordion.json"
       },
       {
-        "title": "Fashion", "classes": "accordion-bg-77"
+        "title": "Fashion",
+        "classes": "accordion-bg-77",
+        "list-src": "./api/fashion-accordion.json"
       },
       {
-        "title": "Interiors", "classes": "accordion-bg-100"
+        "title": "Interiors",
+        "classes": "accordion-bg-100",
+        "list-src": "./api/interiors-accordion.json"
       }
     ]
   },
@@ -146,60 +37,5 @@
        "width": 360, "height": 210, "layout": "responsive",
        "src": "../../img/land-see/content/instagram-cta-sm.png"}
     ]
-  },
-  "subscription": {
-    "form": {
-      "title": "Subscribe to Land + See",
-      "method": "GET",
-      "action": "/",
-      "heading": {
-        "level": 2,
-        "classes": "subscription-heading-text",
-        "text": "Weekly inspiration from "
-      },
-      "inputs": [
-        {
-          "input": {
-            "type": "email",
-            "value": "",
-            "placeholder": "SUBSCRIBE",
-            "id": "email",
-            "name": "name2"
-          }
-        },
-        {
-          "input": {
-            "type": "submit",
-            "value": "",
-            "id": "submit",
-            "name": "submit"
-          }
-        }
-      ]
-    }
-  },
-  "footer": {
-    "faq-links": {
-      "links": [
-        {"url": "#", "text": "Shop"},
-        {"url": "#", "text": "About"},
-        {"url": "#", "text": "Contact"}
-      ]
-    },
-    "copyright": {
-      "text": "© Land + See, 2017",
-      "terms-links": [
-        {"url": "#", "text": "Terms & Conditions"}
-      ]
-    },
-    "social-follow": {
-      "links": [
-        {"twitter": "#"},
-        {"facebook": "#"},
-        {"instagram": "#"},
-        {"pinterest": "#"},
-        {"email": "#"}
-      ]
-    }
   }
 }
