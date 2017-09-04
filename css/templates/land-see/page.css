@@ -263,14 +263,44 @@ section.accordion-bg-30:before {
 
 .post-item {
   max-width: 196px;
+  text-align: left;
+  opacity: 0;
+	transform: translateY(-10px);
 }
 
 .post-item.wide {
   max-width: 402px;
 }
 
+.post-item:last-child {
+  margin-right: 0;
+}
+
 amp-img.cover img {
   object-fit: cover;
+}
+
+a.post-category {
+  font: 400 var(--h7)/var(--line-height-1) var(--font-navigation);
+  text-transform: uppercase;
+  color: var(--color-font-accent);
+}
+
+.post-item h4 {
+  font: 600 var(--h4)/var(--line-height-6) var(--font-secondary);
+  color: var(--color-font-primary);
+}
+
+.post-item h4 a {
+  text-decoration: none;
+}
+
+.post-item h4 a:hover {
+  opacity: var(--color-accordion-opacity-77);
+}
+
+.post-item p {
+  font: 400 var(--h6)/var(--line-height-2) var(--font-primary);
 }
 
 /* Instagram CTA */

@@ -17,21 +17,34 @@ limitations under the License.
 <html ⚡>
   {{> ../../utils/amp-page-head.snip.html}}
   <body class="land-see">
-    <amp-animation id="fadein" layout="nodisplay">
+    <amp-animation id="subscribeBGParallax" layout="nodisplay">
       <script type="application/json">
-        {
-        "duration": "1s",
-        "fill": "both",
-        "direction": "alternate",
-        "animations": [
+        [
           {
             "selector": ".background",
-            "keyframes": [
-              { "transform": "translateY(calc(height('.subscribe') * -0.6))" }
-            ]
+            "duration": 1000,
+            "keyframes": { "transform": "translateY(calc(height('.subscribe') * -0.6))" }
           }
         ]
-      }
+      </script>
+    </amp-animation>
+    <amp-animation id="postSlideIn" layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": ".4s",
+          "easing": "ease-in",
+          "fill": "both",
+          "direction": "alternate",
+          "animations": [
+            {
+              "selector": ".post-item",
+              "delay": "calc(100ms * index())",
+              "keyframes": [
+                {"transform": "translateY(0)", "opacity": 1}
+              ]
+            }
+          ]
+        }
       </script>
     </amp-animation>
     {{> ./partials/nav.snip.html}}
@@ -44,24 +57,38 @@ limitations under the License.
       <p>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
       </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+      </p>
     </div>
 
     {{#accordion}}
     <div class="accordion center items-center">
+      <amp-position-observer
+        on="enter:postSlideIn.start"
+        layout="nodisplay">
+      </amp-position-observer>
       <amp-accordion layout="container" disable-session-states class="amp-accordion">
         {{#section}}
         <section {{expanded}} class="{{classes}}">
           <h3 class="max-width-4 mx-auto">{{title}}</h3>
-          <div class="accordion-content">
-            <ul class="list-reset m0 p0 left flex justify-center nowrap">
+          <div class="accordion-content max-width-4 mx-auto">
+            <ul class="list-reset m0 p0 center flex justify-center">
             {{#land-see-post}}
-              <li class="post-item {{post-type}}">
-                {{> ./partials/image.snip.html}}
-                <div class="post-category">{{post-category}}</div>
-                <h4>{{post-title}}</h4>
-                <p>
-                  {{post-copy}}
-                </p>
+              <li class="post-item mr2 {{post-classes}}">
+                <a href="{{post-url}}">{{> ./partials/image.snip.html}}</a>
+                <a class="post-category" href="{{post-category-url}}">{{post-category}}</a>
+                <h4 class="pt1"><a href="{{post-url}}">{{post-title}}</a></h4>
+                <p class="pt1 pb3">{{post-copy}}</p>
               </li>
             {{/land-see-post}}
             </ul>
