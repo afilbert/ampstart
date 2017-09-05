@@ -60,16 +60,49 @@ limitations under the License.
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>
     </div>
+
+    {{#popular}}
+    <div class="popular-content mx-auto">
+      <h7 class="ml1">{{title}}</h7>
+      <div class="clearfix pt1">
+        <amp-list src="{{list-src}}" height="430" layout="fixed-height">
+          <template type="amp-mustache">
+            <ul class="list-reset m0 p0 center flex justify-center">
+              <%#land-see-category%>
+              <li class="post-item mx1 <%post-classes%>">
+                <a href="<%post-url%>" class="text-decoration-none">
+                  <%#image%>
+                    <amp-img
+                        class="post-image <%classes%>"
+                        alt="<%alt%>"
+                        media="<%media-query%>"
+                        width="<%width%>"
+                        height="<%height%>"
+                        layout="<%layout%>"
+                        src="<%src%>">
+                    </amp-img>
+                  <%/image%>
+                </a>
+                <a class="post-category text-decoration-none" href="<%post-category-url%>"><%post-category%></a>
+                <h4 class="pt1"><a class="text-decoration-none" href="<%post-url%>"><%post-title%></a></h4>
+                <p class="pt1 pb3"><%post-copy%></p>
+              </li>
+              <%/land-see-category%>
+            </ul>
+          </template>
+        </amp-list>
+      </div>
+    </div>
+    {{/popular}}
+
+    {{#animated-cta}}
+    <div class="cta-wrapper mx-auto my5">
+      <a href="{{url}}">
+        {{> ./partials/image.snip.html}}
+      </a>
+    </div>
+    {{/animated-cta}}
 
     {{#accordion}}
     <div class="accordion center items-center">
@@ -115,13 +148,13 @@ limitations under the License.
     </div>
     {{/accordion}}
 
-    {{#instagram-cta}}
-    <div class="instagram-cta-wrapper mx-auto">
+    {{#static-cta}}
+    <div class="cta-wrapper mx-auto my5">
       <a href="{{url}}">
         {{> ./partials/image.snip.html}}
       </a>
     </div>
-    {{/instagram-cta}}
+    {{/static-cta}}
 
     {{> ./partials/subscription.snip.html}}
 

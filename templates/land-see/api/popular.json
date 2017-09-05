@@ -15,7 +15,7 @@
       {
         "image": [
           {"classes": "cover", "alt-text": "Birdhouse metaphor.", "width": 196, "height": 187,
-           "layout": "responsive", "src": "../../img/land-see/content/kaneko-200px.jpg"}
+           "layout": "responsive", "src": "../../img/land-see/content/tiny-houses-200px.jpg"}
         ],
         "post-url": "#",
         "post-category": "Interiors",
@@ -37,7 +37,7 @@
       {
         "image": [
           {"classes": "cover", "alt-text": "Through the mist.", "width": 196, "height": 187,
-           "layout": "responsive", "src": "../../img/land-see/content/main-200px.jpg"}
+           "layout": "responsive", "src": "../../img/land-see/content/maine-200px.jpg"}
         ],
         "post-url": "#",
         "post-category": "Interiors",

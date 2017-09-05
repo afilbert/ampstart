@@ -1,4 +1,22 @@
 {
+  "popular": {
+    "title": "Popular",
+    "list-src": "./api/popular.json"
+  },
+  "animated-cta": {
+    "url": "#",
+    "image": [
+      {"classes": "mt3 mb3", "alt-text": "Summer Sale!", "media-query": "(min-width: 611px)",
+       "width": 813, "height": 342, "layout": "responsive",
+       "src": "../../img/land-see/content/summer-sale-lg.jpg"},
+      {"classes": "mt3 mb3", "alt-text": "Summer Sale!", "media-query": "(min-width: 330px) and (max-width: 610px)",
+       "width": 610, "height": 342, "layout": "responsive",
+       "src": "../../img/land-see/content/summer-sale-md.jpg"},
+      {"classes": "mt4 mb4", "alt-text": "Summer Sale!", "media-query": "(max-width: 329px)",
+       "width": 329, "height": 348, "layout": "responsive",
+       "src": "../../img/land-see/content/summer-sale-sm.jpg"}
+    ]
+  },
   "accordion": {
     "section": [
       {
@@ -24,7 +42,7 @@
       }
     ]
   },
-  "instagram-cta": {
+  "static-cta": {
     "url": "https://www.instagram.com/lifeatgoogle/",
     "image": [
       {"classes": "mt3 mb3", "alt-text": "Instagram, follow us!", "media-query": "(min-width: 608px)",

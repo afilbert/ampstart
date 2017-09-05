@@ -52,6 +52,14 @@ h4,
   line-height: var(--line-height-2);
 }
 
+h7,
+.h7 {
+  font: 600 var(--h7)/var(--line-height-5) var(--font-navigation);
+  color: var(--color-font-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .hr {
   position: relative;
   margin-bottom: 1rem;
@@ -71,6 +79,11 @@ h4,
 .fa {
   font-size: var(--h7);
   font-weight: bold;
+}
+
+.my5 {
+  margin-top: var(--navbar-height);
+  margin-bottom: var(--navbar-height);
 }
 
 /* Navigation */
@@ -196,6 +209,12 @@ h4,
   }
 }
 
+/* Popular */
+
+.popular-content {
+  max-width: 850px;
+}
+
 /* Accordion */
 
 .accordion section {
@@ -298,9 +317,9 @@ a.post-category {
   font: 400 var(--h6)/var(--line-height-2) var(--font-primary);
 }
 
-/* Instagram CTA */
+/* Instagram/Sale CTAs */
 
-.instagram-cta-wrapper {
+.cta-wrapper {
   max-width: 813px;
 }
 
