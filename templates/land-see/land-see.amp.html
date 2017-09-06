@@ -28,6 +28,29 @@ limitations under the License.
         ]
       </script>
     </amp-animation>
+    <amp-animation id="backgroundParallax" layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "1s",
+          "fill": "both",
+          "direction": "alternate",
+          "animations": [
+            {
+              "selector": ".left-bg-image",
+              "keyframes": [
+                { "transform": "translateY(calc(height('.subscribe') * -1.6))" }
+              ]
+            },
+            {
+              "selector": ".right-bg-image",
+              "keyframes": [
+                { "transform": "translateY(calc(height('.subscribe') * 1.6))" }
+              ]
+            }
+          ]
+        }
+      </script>
+    </amp-animation>
     <amp-animation id="accordionSlideIn" layout="nodisplay">
       <script type="application/json">
         {
@@ -98,6 +121,7 @@ limitations under the License.
 
     {{#animated-cta}}
     <div class="cta-wrapper mx-auto my5">
+      {{> ./partials/bg-anim.snip.html}}
       <a href="{{url}}">
         {{> ./partials/image.snip.html}}
       </a>

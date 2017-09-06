@@ -209,6 +209,57 @@ h7,
   }
 }
 
+/* BG Images */
+
+.bg-anim-container {
+  top: 0;
+  height: 0;
+  max-height: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.bg-anim {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-anim svg {
+  width: 100%;
+  height: 100%;
+}
+
+.left-bg-image {
+  left: -31.5%;
+  opacity: .2;
+  width: 327px;
+  height: 261px;
+}
+
+.right-bg-image {
+  right: -38%;
+  opacity: .3;
+  width: 313px;
+  height: 250px;
+}
+
+@media (--breakpoint-sm) {
+  .bg-anim-container {
+    top: -50%;
+  }
+
+  .left-bg-image {
+    width: 690px;
+    height: 551px;
+  }
+
+  .right-bg-image {
+    top: var(--navbar-height);
+    width: 491px;
+    height: 392px;
+  }
+}
+
 /* Popular */
 
 .popular-content {
@@ -321,6 +372,7 @@ a.post-category {
 
 .cta-wrapper {
   max-width: 813px;
+  position: relative;
 }
 
 /* Subscribe */

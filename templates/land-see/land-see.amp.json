@@ -4,6 +4,14 @@
     "list-src": "./api/popular.json"
   },
   "animated-cta": {
+    "bg-animation": {
+      "svg-image": [
+        {"classes": "bg-anim left-bg-image",
+         "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 690 551' overflow='visible'><path fill='#ADD8BF' d='M345.048 0l-.032.051-.033-.051L0 550.606h690.031z'/></svg>"},
+        {"classes": "bg-anim right-bg-image",
+         "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 491 392' overflow='visible'><path fill='#FCDCD4' d='M491.354 0h-280.98v.004H0l210.374 335.771v.005l35.301 56.34.001-.001.004.006 35.3-56.34v-.015z'/></svg>"}
+       ]
+    },
     "url": "#",
     "image": [
       {"classes": "mt3 mb3", "alt-text": "Summer Sale!", "media-query": "(min-width: 611px)",
